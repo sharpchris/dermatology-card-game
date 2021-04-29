@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+        .portfolio {
+            display: grid;
+            grid-template-rows: 300px 300px 300px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+
+            grid-template-areas: "img1 img2 img3" "img4 img5 img6" "img7 img8 img9";
+            max-width: 1200px;
+            text-align: center;
+            
+        }
+
+        .image1 {
+            grid-area: img1;
+            text-align: center;
+        }
+
+        .image2 {
+            grid-area: img2;
+            text-align: center;
+        }
+
+        .image3 {
+            grid-area: img3;
+            text-align: center;
+        }
+
+        .image4 {
+            grid-area: img4;
+            text-align: center;
+        }
+
+        .image5 {
+            grid-area: img5;
+            text-align: center;
+        }
+
+        .image6 {
+            grid-area: img6;
+            text-align: center;
+        }
+
+        .image7 {
+            grid-area: img7;
+            text-align: center;
+        }
+
+        .image8 {
+            grid-area: img8;
+            text-align: center;
+        }
+
+        .image9 {
+            grid-area: img9;
+            text-align: center;
+        }
+
+        .fit {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="portfolio">
+      <? for (i = 0; i < assets.length; i++) { ?>
+      <div class="image<?= i+1 ?>">
+        <img class="fit" src="<?= assets[i] ?>" />
+      </div>
+      <? } ?>
+    </div>
+
+  </body>
+</html>
